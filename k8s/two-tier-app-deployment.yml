@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: two-tier-app
+  name: two-tier-app-deploument
   labels:
     app: two-tier-app
 spec:
@@ -15,7 +15,7 @@ spec:
         app: two-tier-app
     spec:
       containers:
-        - name: two-tier-app
+        - name: two-tier-app-ctr
           image: umairasmat/flaskapp:latest
           env:
             - name: MYSQL_HOST
